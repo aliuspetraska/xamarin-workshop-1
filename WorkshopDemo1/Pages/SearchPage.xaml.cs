@@ -101,7 +101,7 @@ namespace WorkshopDemo1
 			var client = new RestClient("http://vinylshop.herokuapp.com/api/");
 			var request = new RestRequest("getstores.php", Method.GET);
 
-			request.AddParameter("query", city.Replace(" ", string.Empty));
+			request.AddParameter("query", HttpUtility.UrlEncode(city));
 
 			client.ExecuteAsync(request, response =>
 			{

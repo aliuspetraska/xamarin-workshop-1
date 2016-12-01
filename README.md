@@ -137,9 +137,9 @@ During this workshop Alius Petraška, Senior Developer at Adform, will cover the
 
   Parameter | Type | Example
   ---|---|---
-  query | string | Tenderloin%2CSanFrancisco%2CCA%2CUSA
+  query | string | Tenderloin%252c%2BSan%2BFrancisco%252c%2BCA%252c%2BUSA
   
-  Example: http://vinylshop.herokuapp.com/api/getstores.php?query=Tenderloin%2CSanFrancisco%2CCA%2CUSA
+  Example: http://vinylshop.herokuapp.com/api/getstores.php?query=Tenderloin%252c%2BSan%2BFrancisco%252c%2BCA%252c%2BUSA
 
 * http://vinylshop.herokuapp.com/api/showmap.php
 
