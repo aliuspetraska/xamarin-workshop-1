@@ -124,22 +124,24 @@ During this workshop Alius Petraška, Senior Developer at Adform, will cover the
     
 ## vinylshop.herokuapp.com/api/
 
-* http://vinylshop.herokuapp.com/api/getaddress.php?lat=37.785834&lon=-122.406417
-
-  http://vinylshop.herokuapp.com/api/getaddress.php
+* http://vinylshop.herokuapp.com/api/getaddress.php
   
   Parameter | Type | Example
   ---|---|---
   lat | double | 37.785834
   lon | double | -122.406417
+  
+  Example: http://vinylshop.herokuapp.com/api/getaddress.php?lat=37.785834&lon=-122.406417
 
-* http://vinylshop.herokuapp.com/api/getstores.php?query=Tenderloin%2CSanFrancisco%2CCA%2CUSA
+* http://vinylshop.herokuapp.com/api/getstores.php
 
   Parameter | Type | Example
   ---|---|---
   query | string | Tenderloin%2CSanFrancisco%2CCA%2CUSA
+  
+  Example: http://vinylshop.herokuapp.com/api/getstores.php?query=Tenderloin%2CSanFrancisco%2CCA%2CUSA
 
-* http://vinylshop.herokuapp.com/api/showmap.php?width=375&height=603&origin=Tenderloin%2c+San+Francisco%2c+CA%2c+USA&destination=1797+Market+St%2c+San+Francisco%2c+CA+94103%2c+United+States
+* http://vinylshop.herokuapp.com/api/showmap.php
 
   Parameter | Type | Example
   ---|---|---
@@ -147,3 +149,5 @@ During this workshop Alius Petraška, Senior Developer at Adform, will cover the
   height | int | 603
   origin | string | Tenderloin%2c+San+Francisco%2c+CA%2c+USA
   destination | string | 1797+Market+St%2c+San+Francisco%2c+CA+94103%2c+United+States
+
+  Example: http://vinylshop.herokuapp.com/api/showmap.php?width=375&height=603&origin=Tenderloin%2c+San+Francisco%2c+CA%2c+USA&destination=1797+Market+St%2c+San+Francisco%2c+CA+94103%2c+United+States
