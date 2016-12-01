@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="WorkshopDemo1.SearchPage"
+		xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+		Title="Record Shop Locator"
+		NavigationPage.BackButtonTitle="Back">
+	<ContentPage.Content>
+		<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Spacing="0" Padding="0" Margin="0">
+			<!-- // -->
+			<SearchBar x:Name="SearchBarControl" Placeholder="Destination, city, address" CancelButtonColor="#FB7A52" />
+			<!-- // -->
+			<ActivityIndicator x:Name="ActivityIndicatorControl" WidthRequest="32" HeightRequest="32" Margin="15" IsEnabled="true" IsRunning="true" IsVisible="false" 
+					Color="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+			<!-- // -->
+			<ListView x:Name="ListViewControl" CachingStrategy="RecycleElement"
+					HorizontalOptions="FillAndExpand"
+					IsVisible="false" HasUnevenRows="true" ItemTapped="Handle_ItemTapped">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Grid RowSpacing="5" ColumnSpacing="15" Padding="15,10,15,10" Margin="0">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="Auto" />
+									<RowDefinition Height="Auto" />
+									<RowDefinition Height="*" />
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="64" />
+									<ColumnDefinition Width="*" />
+									<ColumnDefinition Width="Auto" />
+								</Grid.ColumnDefinitions>
+								<StackLayout Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Spacing="0" Margin="0" Padding="0">
+									<controls:CircleImage Source="{Binding Path=photo_url}" WidthRequest="64" HeightRequest="64" Aspect="AspectFill" />
+								</StackLayout>
+								<Label Grid.Row="0" Grid.Column="1" Text="{Binding Path=name}" FontSize="14" />
+								<Label Grid.Row="1" Grid.Column="1" Text="{Binding Path=formatted_address}" FontSize="12" />
+								<Label Grid.Row="0" Grid.RowSpan="3" Grid.Column="2" Text="{Binding Path=open_now}" FontSize="10" 
+									HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+									VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="#8e8e93" />
+							</Grid>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<!-- // -->
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
